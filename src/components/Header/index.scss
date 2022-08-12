@@ -1,0 +1,32 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--white-color);
+  // margin-right: 50px;
+  nav {
+    .container {
+      .navbar-nav {
+        flex-direction: column;
+        gap: 20px;
+        a,
+        a:visited {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--gray-color);
+          font: {
+            size: 1.5rem;
+            // weight: 500;
+          }
+          &:hover {
+            color: var(--blue-color);
+          }
+        }
+      }
+    }
+  }
+}

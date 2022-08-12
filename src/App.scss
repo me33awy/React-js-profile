@@ -1,0 +1,59 @@
+@import "~bootstrap/scss/bootstrap";
+:root {
+  --blue-color: rgb(0, 98, 255);
+  --gray-color: rgb(91, 110, 128);
+  --dark-blue-color: rgb(0, 8, 61);
+  --light-blue-color: rgb(26, 163, 255);
+  --yellow-color: rgb(251, 216, 34);
+  --orange-color: rgb(238, 142, 24);
+  --light-green-color: rgb(139, 203, 200);
+  --green-color: rgb(46, 166, 70);
+  --valoit-color: rgb(50, 45, 111);
+  --black-color: rgb(26, 26, 26);
+  --brown-color: rgb(64, 64, 64);
+  --light-gray-color: rgb(183, 183, 183);
+  --white-color: rgb(248, 249, 250);
+  --primary-font: "Ubuntu", sans-serif;
+}
+@font-face {
+  font-family: var(--primary-font);
+  src: url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: all 0.1s;
+}
+body {
+  font: {
+    size: 100%;
+    family: var(--primary-font);
+  }
+}
+img {
+  max-width: 100%;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+@mixin xs-screen() {
+  @media (min-width: map-get($grid-breakpoints , xs)) and (max-width: map-get($grid-breakpoints , md)) {
+    @content;
+  }
+}

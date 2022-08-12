@@ -1,0 +1,61 @@
+@use "../../App.scss";
+main {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  .row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .log {
+    @include App.xs-screen {
+      text-align: center;
+    }
+    h1 {
+      font: {
+        size: 5rem;
+        weight: 800;
+      }
+
+      @include App.xs-screen {
+        font-size: 3rem;
+      }
+      color: var(--brown-color);
+    }
+    h2 {
+      color: var(--brown-color);
+      font: {
+        size: 2rem;
+      }
+    }
+    p {
+      color: var(--light-gray-color);
+    }
+    button {
+      padding: 10px 20px;
+      background-color: var(--brown-color);
+      border: none;
+      svg {
+        margin-left: 10px;
+      }
+    }
+  }
+  .img {
+    position: relative;
+    box-shadow: 1px 4px 9px 2px var(--light-gray-color);
+    overflow: hidden;
+    background-color: var(--brown-color);
+    border-radius: 20px;
+    img {
+      transition: all 0.5s;
+      filter: grayscale(60%);
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
