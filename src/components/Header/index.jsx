@@ -12,36 +12,25 @@ import { faMessage } from "@fortawesome/free-solid-svg-icons";
 import { faTerminal } from "@fortawesome/free-solid-svg-icons";
 function Header() {
   return (
-    <header>
-      <Navbar variant="dark" sticky="top" expand="lg">
+    <header className="primary-header">
+      <Navbar variant="dark" expand="lg">
         <Container>
           <Nav className="me-auto">
-            <Link to="/">
-              {" "}
-              <Nav.Link href="#home">
-                <FontAwesomeIcon icon={faHouse} />
-              </Nav.Link>
-            </Link>
-            <Link to="/about">
-              <Nav.Link href="#about">
-                <FontAwesomeIcon icon={faUser} />
-              </Nav.Link>
-            </Link>
-            <Link to="/projects">
-              <Nav.Link href="#projects">
-                <FontAwesomeIcon icon={faBriefcase} />
-              </Nav.Link>
-            </Link>
-            <Link to="/contact">
-              <Nav.Link href="#contact">
-                <FontAwesomeIcon icon={faMessage} />
-              </Nav.Link>
-            </Link>
-            <Link to="/capabilities">
-              <Nav.Link href="#capabilities">
-                <FontAwesomeIcon icon={faTerminal} />
-              </Nav.Link>
-            </Link>
+            <Nav.Link href="#home">
+              <FontAwesomeIcon icon={faHouse} />
+            </Nav.Link>
+            <Nav.Link href="#about">
+              <FontAwesomeIcon icon={faUser} />
+            </Nav.Link>
+            <Nav.Link href="#projects">
+              <FontAwesomeIcon icon={faBriefcase} />
+            </Nav.Link>
+            <Nav.Link href="#contact">
+              <FontAwesomeIcon icon={faMessage} />
+            </Nav.Link>
+            <Nav.Link href="#capabilities">
+              <FontAwesomeIcon icon={faTerminal} />
+            </Nav.Link>
           </Nav>
         </Container>
       </Navbar>

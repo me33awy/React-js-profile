@@ -6,7 +6,7 @@ header {
   display: flex;
   align-items: center;
   background-color: var(--white-color);
-  // margin-right: 50px;
+  z-index: 100;
   nav {
     .container {
       .navbar-nav {
@@ -20,7 +20,6 @@ header {
           color: var(--gray-color);
           font: {
             size: 1.5rem;
-            // weight: 500;
           }
           &:hover {
             color: var(--blue-color);

@@ -1,0 +1,28 @@
+@use "../../App.scss";
+#about {
+  .row {
+    display: flex;
+    align-items: center;
+  }
+  .log {
+    @include App.xs-screen {
+      text-align: center;
+    }
+    button {
+      svg {
+        margin-left: 10px;
+      }
+    }
+  }
+  .img {
+    position: relative;
+    overflow: hidden;
+    img {
+      transition: all 0.5s;
+      filter: grayscale(70%);
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@use "../../App.scss";
+main,
+.main {
+  padding: 10px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  .row {
+    display: flex;
+    align-items: center;
+    row-gap: 20px;
+  }
+  .log {
+    @include App.xs-screen {
+      text-align: center;
+    }
+    h1 {
+      @include App.xs-screen {
+        font-size: var(--fs-48);
+      }
+    }
+    button {
+      svg {
+        margin-left: 10px;
+      }
+    }
+  }
+  .img {
+    position: relative;
+    overflow: hidden;
+    img {
+      transition: all 0.5s;
+      filter: grayscale(70%);
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}

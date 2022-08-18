@@ -1,44 +1,76 @@
 import "./index.scss";
 import React from "react";
 import Button from "react-bootstrap/Button";
-import cv from "../../assets/pdf/2.png";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import person from "../../assets/images/aboutPortrait.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBriefcase, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import Container from "react-bootstrap/esm/Container";
+import AOS from "aos";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
 function About() {
+  const user = {
+    name: "Amr Mekkawy",
+    age: 22,
+    job: "Front-End Developer",
+    skills: [
+      " HTML",
+      "CSS",
+      " JavaScript",
+      "Sass",
+      "Git",
+      "Github",
+      "React",
+      "React-BootStrap",
+      "NodeJS ",
+    ],
+  };
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  });
   return (
     <>
-      <Row>
-        <Col xs={12} sm={12} md={12} lg={6}>
-          {" "}
-          <div className="log">
-            <h1>Hi there, I'm Amr Mekkawy</h1>
-            <p>
-              I’m a very ambitious front-end developer looking for a role in
-              established IT company with the opportunity to work with the
-              latest technologies on challenging and diverse projects. I'm
-              quietly confident, naturally curious, and perpetually working on
-              improving my chops one design problem at a time. If I need to
-              define myself in one sentence that would be a family person,
-              father of a beautiful daughter, photography enthusiast, and
-              tech-obsessed!!!. I put special effort into optimizing my code and
-              providing the best user experience. I would love to give you any
-              kind of support also after the project's completion. I guarantee a
-              commitment during work on your project.
-            </p>
-            <a download href={cv}>
+      <div className="main" id="about">
+        <Container>
+          <Row data-aos="fade-up">
+            <Col xs={12} lg={6}>
               {" "}
-              <Button variant="primary">Download Resume</Button>{" "}
-            </a>
-          </div>
-        </Col>
-        <Col xs={12} sm={12} md={12} lg={5}>
-          {" "}
-          <div className="img">
-            <img src={person} alt="" />
-          </div>{" "}
-        </Col>
-      </Row>
+              <div className="log">
+                <p className="color-light-gray font-18 font-600">
+                  I’m a very ambitious {user.job} &#127912; looking for a role
+                  in established IT company with the opportunity to work with
+                  the latest technologies on challenging and diverse projects.
+                  I'm quietly confident, naturally curious, and perpetually
+                  working on improving my chops one design problem at a time. If
+                  I need to define myself in one sentence that would be a family
+                  person &#128106;, father of a beautiful daughter &#128103;,
+                  photography enthusiast &#128247;,and tech-obsessed!!!. I put
+                  special effort into optimizing my code and providing the best
+                  user experience.I guarantee a commitment during work on your
+                  project.
+                </p>
+                <a href="#projects">
+                  {" "}
+                  <Button
+                    variant="primary"
+                    className="bg-brown border-none padding-block-btn padding-mobile-btn font-500 font-18 box-shadow"
+                  >
+                    View my work <FontAwesomeIcon icon={faBriefcase} />
+                  </Button>{" "}
+                </a>
+              </div>
+            </Col>
+            <Col xs={12} lg={6}>
+              {" "}
+              <div className="img bg-brown box-shadow radius">
+                <img src={person} alt={user.name} />
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </>
   );
 }
