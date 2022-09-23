@@ -10,6 +10,7 @@ import Container from "react-bootstrap/esm/Container";
 import AOS from "aos";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
+import * as Icons from "react-bootstrap-icons";
 function About() {
   const user = {
     name: "Amr Mekkawy",
@@ -32,13 +33,12 @@ function About() {
   });
   return (
     <>
-      <div className="main" id="about">
-        <Container>
-          <Row data-aos="fade-up">
-            <Col xs={12} lg={6}>
+        <div className="main d-flex align-items-center" id="about">
+          <Row data-aos="fade-up" className="gy-3">
+            <Col xs={12} lg={6} className=" d-flex align-items-center">
               {" "}
               <div className="log">
-                <p className="color-light-gray font-18 font-600">
+                <p className="color-light-gray font-18 font-500">
                   I’m a very ambitious {user.job} &#127912; looking for a role
                   in established IT company with the opportunity to work with
                   the latest technologies on challenging and diverse projects.
@@ -57,7 +57,8 @@ function About() {
                     variant="primary"
                     className="bg-brown border-none padding-block-btn padding-mobile-btn font-500 font-18 box-shadow"
                   >
-                    View my work <FontAwesomeIcon icon={faBriefcase} />
+                    View my work <Icons.BriefcaseFill />
+                    {/* <FontAwesomeIcon icon={faBriefcase} /> */}
                   </Button>{" "}
                 </a>
               </div>
@@ -69,8 +70,7 @@ function About() {
               </div>
             </Col>
           </Row>
-        </Container>
-      </div>
+        </div>
     </>
   );
 }

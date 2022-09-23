@@ -1,30 +1,27 @@
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  background-color: var(--white-color);
-  z-index: 100;
-  nav {
-    .container {
-      .navbar-nav {
-        flex-direction: column;
-        gap: 20px;
-        a,
-        a:visited {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: var(--gray-color);
-          font: {
-            size: 1.5rem;
-          }
-          &:hover {
-            color: var(--blue-color);
-          }
-        }
+  background-color: var(--vilote-color);
+  background-image: url(../../assets/svg/bg.svg);
+  .tech-talk {
+    span {
+      box-shadow: 15px 15px var(--black-color);
+      position: relative;
+      background-color: var(--yellow-color);
+      font-size: var(--fs-h1);
+      font-weight: var(--fw-700);
+      padding: var(--box-padding-lg);
+      border: var(--box-border);
+      &::before {
+        content: "The";
+        position: absolute;
+        top: -50%;
+        left: -30%;
+        transform: translate(50%, 50%);
+        background: var(--white-color);
+        padding: var(--box-padding-sm);
+        border: var(--box-border);
+        font-size: var(--fs-h3);
+        font-weight: var(--fw-700);
+        font-style: italic;
       }
     }
   }

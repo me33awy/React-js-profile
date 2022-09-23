@@ -1,15 +1,8 @@
 @use "../../App.scss";
-main,
-.main {
-  padding: 10px 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#home {
   min-height: 100vh;
-  .row {
-    display: flex;
-    align-items: center;
-    row-gap: 20px;
+  padding: 0 40px;
+  @include App.xs-screen {
   }
   .log {
     @include App.xs-screen {

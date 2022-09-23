@@ -5,7 +5,8 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/esm/Container";
 import AOS from "aos";
 import { useEffect } from "react";
-import Img1 from "../../assets/images/desktop1.jpg";
+import project1 from "../../assets/png/Landing.png";
+import project2 from "../../assets/png/mobile-design.png";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
@@ -31,55 +32,55 @@ function Projects() {
   });
   return (
     <>
-      <div className="main" id="projects" data-aos="fade-up">
-        <Container>
-          <Row className="text-center">
-            <h1 className="color-brown font-48 font-700">Projects</h1>
-            <p className="color-light-gray font-600 font-18">
-              Prototypes, Digital Products (Apps, Websites, SaaS solutions) and
-              design systems which are visually pleasing, user-centric and easy
-              to use.
-            </p>
-          </Row>
-          <Row className="grid">
-            <Card style={{ width: "18rem" }} className="bg-yellow-color">
+      <div id="projects" data-aos="fade-up">
+        <Row className="gy-3">
+          <Col xs={12} lg={6}>
+            <Row>
+              <Col xs={12}>
+                {" "}
+                <Card style={{ width: "18rem" }}>
+                  <Card.Img variant="top" src="holder.js/100px180" />
+                  <Card.Body>
+                    <Card.Title>Card Title</Card.Title>
+                    <Card.Text>
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </Card.Text>
+                    <Button variant="primary">Go somewhere</Button>
+                  </Card.Body>
+                </Card>
+              </Col>
+              <Col xs={12}>
+                {" "}
+                <Card style={{ width: "18rem" }}>
+                  <Card.Img variant="top" src="holder.js/100px180" />
+                  <Card.Body>
+                    <Card.Title>Card Title</Card.Title>
+                    <Card.Text>
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </Card.Text>
+                    <Button variant="primary">Go somewhere</Button>
+                  </Card.Body>
+                </Card>
+              </Col>
+            </Row>
+          </Col>
+          <Col xs={12} lg={6}>
+            <Card style={{ width: "18rem" }}>
+              <Card.Img variant="top" src="holder.js/100px180" />
               <Card.Body>
-                <Card.Title className="font-32 font-700 ">
-                  Interactive Card
-                </Card.Title>
+                <Card.Title>Card Title</Card.Title>
                 <Card.Text>
-                  Build an interactive card form for registration with credit
-                  card or debit card
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
                 </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
               </Card.Body>
-              <Card.Img variant="top" src={Img1} />
+              {/* <Container> */}
             </Card>
-            <Card style={{ width: "18rem" }} className="bg-orange-color">
-              <Card.Body>
-                <Card.Title className="font-32 font-700 ">
-                  Interactive Card
-                </Card.Title>
-                <Card.Text>
-                  Build an interactive card form for registration with credit
-                  card or debit card
-                </Card.Text>
-              </Card.Body>
-              <Card.Img variant="top" src={Img1} />
-            </Card>
-            <Card style={{ width: "18rem" }} className="bg-green-color">
-              <Card.Body>
-                <Card.Title className="font-32 font-700 ">
-                  Interactive Card
-                </Card.Title>
-                <Card.Text>
-                  Build an interactive card form for registration with credit
-                  card or debit card
-                </Card.Text>
-              </Card.Body>
-              <Card.Img variant="top" src={Img1} />
-            </Card>
-          </Row>
-        </Container>
+          </Col>
+        </Row>
       </div>
     </>
   );
